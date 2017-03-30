@@ -35,7 +35,7 @@
         
 	$oMainController = eval("return new ".$sModule."Controller();");
 	if(method_exists($oMainController,'call'.$sAction))
-	{
+	{ 
             if($oMainController->aLayout[$sAction])
             {               
                 require(getconfig('rootDir')."/controllers/".$sAppName."/templates/".$sLayoutPath.$oMainController->aLayout[$sAction].".layout.php");
